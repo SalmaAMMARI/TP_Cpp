@@ -6,7 +6,7 @@
 int main() {
 
     #ifdef DEBUG
-        std::cout<<"The macro DEBUG is  defined";
+        std::cout<<"The macro DEBUG is  define";
     #else
         std::cout<<"The macro DEBUG is not Defined";
     #endif
