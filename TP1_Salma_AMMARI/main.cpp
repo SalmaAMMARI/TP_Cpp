@@ -1,51 +1,72 @@
 #include <iostream> //inclusion de la bibliothèque iostream
-#define PI 3.14  // définition de la constante PI
-#define DEBUG 1  //enlever le "//" avant "define DEBUG PI "si vous voulez tester l'autre cas
+
 
 #ifndef EXO
-#define EXO 2
+#define EXO 5
 #endif
-namespace salma{
-    int age=19;
-}
-int main(int argc, char* argv[]) {
+int main() {
     #if EXO==1
-        //Exercice1:Utilisation des directives du préprocesseur
-        #ifdef DEBUG
-            std::cout<<"The macro DEBUG is  defined"<<std::endl;
-        #else
-            std::cout<<"The macro DEBUG is not Defined";
-        #endif
-    #elif EXO==2
-        //Exercice 2:Utilisation de la fonction main
-       
-        if (argc > 1) {
-            // Afficher les arguments passés en ligne de commande
-            for (int i = 1; i < argc; ++i) {
-                std::cout << "Argument " << i << ": " << argv[i] << std::endl;
-            }
-        } else {
-            std::cout << "No arguments passed" << std::endl;
-        }
-    #elif EXO==3
-        //Eexercice3:
-        //sans utiliser "using namespace"
-        std::cout<<"I am "<<salma::age<<" years old"<<std::endl;
-        //Avec utilisation de 'using namespace'
-        using namespace salma ;
-        std::cout<<"I am "<<age<<" years old"<<std::endl;
-    #elif EXO==4
-        // Demander à l'utilisateur d'entrer un entier
-        std::cout << "entrer un entier:" << std::endl;
-        int entier; // Variable pour stocker l'entier
-        std::cin>>entier;
-        // Demander à l'utilisateur d'entrer un nombre décimal
-        std::cout << "entrer un decimal:" << std::endl;
-        double decimal;  // Variable pour stocker le nombre décimal 
-        std::cin>>decimal;
-        // Afficher les valeurs saisies
-        std::cout<<"valeurs saisies "<<entier<<" et "<<decimal<<std::endl;
+    //Eexrcice1:Affichage d’un message
+     std::cout << "Hello, World!" << std::endl; 
+    // Affiche "Hello, World!" suivi d'un retour à la ligne
+
+    std::cout << "Welcome to C++";
         
+    #elif EXO==2
+        //Exercice 2:Lecture et affichage d’un entier
+        int nombre; // Déclaration d'une variable pour stocker le nombre
+
+        // Demande à l'utilisateur d'entrer un nombre
+        std::cout << "Entrez un nombre: ";  
+        std::cin >> nombre; // Lecture de l'entrée utilisateur
+
+        // Affichage du nombre entré
+        std::cout << "Vous avez entré: " << nombre << std::endl;
+    #elif EXO==3
+        //Exercice3:Opérations mathématique
+        double nombre1, nombre2; // Déclaration de deux variables pour stocker les nombres
+
+        // Demande à l'utilisateur d'entrer deux nombres
+        std::cout << "Entrez deux nombres: ";
+        std::cin >> nombre1 >> nombre2; 
+
+        // Calcul des opérations demandées
+        double somme = nombre1 + nombre2;
+        double difference = nombre1 - nombre2;
+        double produit = nombre1 * nombre2;
+
+        // Affichage des résultats
+        std::cout << "Somme: " << somme << std::endl;
+        std::cout << "Différence: " << difference << std::endl;
+        std::cout << "Produit: " << produit << std::endl;
+
+        // Vérification si le deuxième nombre est différent de zéro avant la division
+        if (nombre2 != 0) {
+            double quotient = nombre1 / nombre2;
+            std::cout << "Quotient: " << quotient << std::endl;
+        } else {
+            std::cout << "Erreur : Division par zéro impossible." << std::endl;
+        }
+    #elif EXO==4
+    //Exercice 4:
+    std::cout << "Entrez un nombre: "; // Ajout du guillemet fermant et du point-virgule
+    int nombre; // Déclaration de la variable nombre
+    std::cin >> nombre; // Lecture du nombre saisi par l'utilisateur
+
+    std::cout << "Vous avez entré: " << nombre << std::endl; // Ajout du point-virgule
+    #elif EXO==5
+    //Exercice 5 : Conversion de température   
+    double celsius;
+
+    // Demande à l'utilisateur d'entrer une température en Celsius
+    std::cout << "Entrez une température en Celsius: ";
+    std::cin >> celsius; // Lecture de l'entrée utilisateur
+
+    // Conversion de la température en Fahrenheit
+    double fahrenheit = (9.0 / 5.0) * celsius + 32;
+
+    // Affichage du résultat
+    std::cout << "Température en Fahrenheit: " << fahrenheit << std::endl;     
 
         
 
@@ -55,12 +76,5 @@ int main(int argc, char* argv[]) {
     #error 'Veuillez définir EXO  à1 , 2,3 ou 4 (exemple: -DEXO=1 , -DEXO=2)'
     #endif
     return 0;
-
-
-
-
-
-
-
-    
 }
+
