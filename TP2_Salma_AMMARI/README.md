@@ -16,7 +16,7 @@ Le projet contient un seul fichier source principal nommé `main.cpp`.
 
 1. Avant de compiler, assurez-vous d’être dans le dossier contenant `main.cpp` :
  ```bash
-   cd /chemin/vers/TP1_Nom_Prenom
+   cd /chemin/vers/TP2_Nom_Prenom
    ```
 
 
@@ -39,6 +39,7 @@ Le projet contient un seul fichier source principal nommé `main.cpp`.
      ```bash
      g++ -DEXO=4 main.cpp -o main
      ```
+  
 
 3. **Exécuter le programme** :
    Une fois le programme compilé, vous pouvez l'exécuter avec la commande suivante :
@@ -77,7 +78,7 @@ Le projet contient un seul fichier source principal nommé `main.cpp`.
 Voici un résumé des commandes de compilation et d'exécution pour chaque exercice :
 
 | Exercice  |Commande de compilation                           | Commande d'exécution             |
-|------------|------------------------------------------------|-----------------------------------|
+|------------|---------------------------------------------------|--------------------------------|
 | Exercice 1 | `g++ -DEXO=1 main.cpp -o main`                    | `./main`                       |
 | Exercice 2 | `g++ -DEXO=2 main.cpp -o main`                    | `./main arg1 arg2`(ex de 2 args|
 | Exercice 3 | `g++ -DEXO=3 main.cpp -o main`                    | `./main`                       |
