@@ -3,7 +3,7 @@
 #define DEBUG 1  //enlever le "//" avant "define DEBUG PI "si vous voulez tester l'autre cas
 
 #ifndef EXO
-#define EXO 2
+#define EXO 1
 #endif
 namespace salma{
     int age=19;
