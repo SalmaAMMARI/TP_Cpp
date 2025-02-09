@@ -2,7 +2,7 @@
 
 
 #ifndef EXO
-#define EXO 5
+#define EXO 1
 #endif
 int main() {
     #if EXO==1
