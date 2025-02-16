@@ -2,15 +2,8 @@ README - TP3
 
  The exercises include memory analysis, cleaning service estimation, compile-time factorial computation, global vs. local variable usage, constants, and overflow detection in multiplication.
 
-Table of Contents
 
-Requirements
-
-Compilation and Execution
-
-Exercises
-
-Notes
+Notes:
 
 
 To compile and run these exercises, ensure you have:
