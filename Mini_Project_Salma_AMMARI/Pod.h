@@ -23,7 +23,7 @@ public:
     friend std::ostream& operator << (std::ostream& os, const Pod& p);
     const std::vector<std::unique_ptr<Container>>& getContainers() const;
 
-    // Bonus methods (needed for my implementation)
+   
     double totalMemory() const;
     double totalCpu() const;
 };
