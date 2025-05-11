@@ -12,14 +12,13 @@ public:
         : std::runtime_error(message) {}
 };
 
-// Exception pour les erreurs d'allocation de ressources
+
 class AllocationException : public CloudException {
 public:
     explicit AllocationException(const std::string& message)
         : CloudException("Allocation Error: " + message) {}
 };
 
-// Exception pour les erreurs liées aux fichiers
 class FileException : public CloudException {
 public:
     explicit FileException(const std::string& message)
